@@ -1,0 +1,1970 @@
+Help on package pykd:
+
+NAME
+    pykd
+
+FILE
+    c:\python27\lib\site-packages\pykd\pykd.pyd
+
+PACKAGE CONTENTS
+    pykd
+
+CLASSES
+    exceptions.Exception(exceptions.BaseException)
+        DbgException
+            CPUException
+            CallException
+            MemoryException
+            SymbolException
+                TypeException
+    
+    class CPUException(DbgException)
+     |  CPU exception
+     |  
+     |  Method resolution order:
+     |      CPUException
+     |      DbgException
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Data descriptors inherited from DbgException:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.Exception:
+     |  
+     |  __init__(...)
+     |      x.__init__(...) initializes x; see help(type(x)) for signature
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+    
+    class CallException(DbgException)
+     |  Function call exception
+     |  
+     |  Method resolution order:
+     |      CallException
+     |      DbgException
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Data descriptors inherited from DbgException:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.Exception:
+     |  
+     |  __init__(...)
+     |      x.__init__(...) initializes x; see help(type(x)) for signature
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+    
+    class DbgException(exceptions.Exception)
+     |  Pykd base exception class
+     |  
+     |  Method resolution order:
+     |      DbgException
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Data descriptors defined here:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.Exception:
+     |  
+     |  __init__(...)
+     |      x.__init__(...) initializes x; see help(type(x)) for signature
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+    
+    class MemoryException(DbgException)
+     |  Target memory access exception class
+     |  
+     |  Method resolution order:
+     |      MemoryException
+     |      DbgException
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Data descriptors inherited from DbgException:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.Exception:
+     |  
+     |  __init__(...)
+     |      x.__init__(...) initializes x; see help(type(x)) for signature
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+    
+    class SymbolException(DbgException)
+     |  Symbol exception
+     |  
+     |  Method resolution order:
+     |      SymbolException
+     |      DbgException
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Data descriptors inherited from DbgException:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.Exception:
+     |  
+     |  __init__(...)
+     |      x.__init__(...) initializes x; see help(type(x)) for signature
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+    
+    class TypeException(SymbolException)
+     |  type exception
+     |  
+     |  Method resolution order:
+     |      TypeException
+     |      SymbolException
+     |      DbgException
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Data descriptors inherited from DbgException:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.Exception:
+     |  
+     |  __init__(...)
+     |      x.__init__(...) initializes x; see help(type(x)) for signature
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+
+FUNCTIONS
+    addSyntheticModule(...)
+        addSyntheticModule( (long)base, (int)size, (unicode)name [, (unicode)path]) -> None :
+            The addSyntheticModule function adds a synthetic module to the module list the debugger maintains for the current process
+        
+            C++ signature :
+                void addSyntheticModule(unsigned __int64,unsigned long,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >])
+    
+    addSyntheticSymbol(...)
+        addSyntheticSymbol( (long)arg1, (int)arg2, (unicode)arg3) -> syntheticSymbol :
+            The addSyntheticSymbol function adds a synthetic symbol to a module in the current process
+            Note: reloading the symbols for the module deletes all synthetic symbols associated with that module.
+        
+            C++ signature :
+                struct kdlib::SyntheticSymbol addSyntheticSymbol(unsigned __int64,unsigned long,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    addr64(...)
+        addr64( (long)arg1) -> int :
+            Extend address to 64 bits formats
+        
+            C++ signature :
+                unsigned __int64 addr64(unsigned __int64)
+    
+    appendSrcPath(...)
+        appendSrcPath( (unicode)arg1) -> None :
+            Append current source path
+        
+            C++ signature :
+                void appendSrcPath(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    appendSymbolPath(...)
+        appendSymbolPath( (unicode)arg1) -> None :
+            Append current symbol path
+        
+            C++ signature :
+                void appendSymbolPath(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    attachKernel(...)
+        attachKernel([  (unicode)connectOptions]) -> None :
+            Connect the debugger engine to a kernel target.
+            If connectOptions is not specified - attach to the local kernel
+        
+            C++ signature :
+                void attachKernel([ class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >])
+    
+    attachProcess(...)
+        attachProcess( (int)pid [, (int)debugOptions]) -> int :
+            Attach debugger to a existing process
+        
+            C++ signature :
+                unsigned long attachProcess(unsigned long [,unsigned long])
+    
+    breakin(...)
+        breakin() -> None :
+            Break into debugger
+        
+            C++ signature :
+                void breakin()
+    
+    bugCheckData(...)
+        bugCheckData() -> tuple :
+            Function reads the kernel bug check code and related parameters
+            And return tuple: (code, arg1, arg2, arg3, arg4)
+        
+            C++ signature :
+                class boost::python::tuple bugCheckData()
+    
+    callExt(...)
+        callExt( (long)arg1, (unicode)arg2, (unicode)arg3) -> unicode :
+            Call a WinDBG extension's routine. Parameters: handle returned by loadExt; string command line
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > callExt(unsigned __int64,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    callFunctionByAddr(...)
+        object callFunctionByAddr(tuple args, dict kwds) :
+        
+            C++ signature :
+                object callFunctionByAddr(tuple args, dict kwds)
+    
+    callFunctionByPtr(...)
+        object callFunctionByPtr(tuple args, dict kwds) :
+        
+            C++ signature :
+                object callFunctionByPtr(tuple args, dict kwds)
+    
+    callFunctionRaw(...)
+        object callFunctionRaw(tuple args, dict kwds) :
+        
+            C++ signature :
+                object callFunctionRaw(tuple args, dict kwds)
+    
+    changeDebugOptions(...)
+        changeDebugOptions( (int)arg1, (int)arg2) -> None :
+            Change debug options
+        
+            C++ signature :
+                void changeDebugOptions(unsigned long {lvalue},unsigned long {lvalue})
+    
+    closeDump(...)
+        closeDump([  (int)id]) -> None :
+            Close crash dump
+        
+            C++ signature :
+                void closeDump([ unsigned long])
+    
+    compareMemory(...)
+        compareMemory( (long)offset1, (long)offset2, (long)length [, (bool)phyAddr]) -> bool :
+            Compare two memory buffers by virtual or physical addresses
+        
+            C++ signature :
+                bool compareMemory(unsigned __int64,unsigned __int64,unsigned __int64 [,bool])
+    
+    containingRecord(...)
+        containingRecord( (long)arg1, (unicode)arg2, (unicode)arg3) -> typedVar :
+            Return instance of the typedVar class. It's value are loaded from the target memory.The start address is calculated by the same method as the standard macro CONTAINING_RECORD does
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypedVar> containingRecord(unsigned __int64,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+        
+        containingRecord( (long)arg1, (typeInfo)arg2, (unicode)arg3) -> typedVar :
+            Return instance of the typedVar class. It's value are loaded from the target memory.The start address is calculated by the same method as the standard macro CONTAINING_RECORD does
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypedVar> containingRecord(unsigned __int64,class boost::shared_ptr<class kdlib::TypeInfo> {lvalue},class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    createStruct(...)
+        createStruct( (unicode)name [, (long)align]) -> typeInfo :
+            Create custom struct
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypeInfo> createStruct(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,unsigned __int64])
+    
+    createUnion(...)
+        createUnion( (unicode)name [, (long)align]) -> typeInfo :
+            Create custom union
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypeInfo> createUnion(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,unsigned __int64])
+    
+    currentTime(...)
+        currentTime() -> int :
+            Return the number of seconds since the beginning of 1970
+        
+            C++ signature :
+                unsigned long currentTime()
+    
+    dbgCommand(...)
+        dbgCommand( (unicode)command [, (bool)suppressOutput [, (int)outputMask]]) -> object :
+            Run a debugger's command and return it's result as a string. You can set additional outputMaskif you want to get also error messages
+        
+            C++ signature :
+                class boost::python::api::object dbgCommand(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,bool [,unsigned long]])
+    
+    defineFunction(...)
+        defineFunction( (typeInfo)returnType [, (callingConvention)callconv]) -> typeInfo :
+            Define custom function prototype
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypeInfo> defineFunction(class boost::shared_ptr<class kdlib::TypeInfo> [,enum kdlib::CallingConventionType])
+    
+    deinitialize(...)
+        deinitialize() -> None :
+            Deintialize debug engine, only for console mode
+        
+            C++ signature :
+                void deinitialize()
+    
+    detachAllProcesses(...)
+        detachAllProcesses() -> None :
+            Detach from all process and resume all their threads
+        
+            C++ signature :
+                void detachAllProcesses()
+    
+    detachProcess(...)
+        detachProcess([  (int)id]) -> None :
+            Stop process debugging
+        
+            C++ signature :
+                void detachProcess([ unsigned long])
+    
+    dinput(...)
+        dinput( (unicode)arg1) -> None :
+            Provide input for debugger
+        
+            C++ signature :
+                void dinput(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    dprint(...)
+        dprint( (unicode)str [, (bool)dml]) -> None :
+            Print out string. If dml = True string is printed with dml highlighting ( only for windbg )
+        
+            C++ signature :
+                void dprint(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,bool])
+    
+    dprintln(...)
+        dprintln( (unicode)str [, (bool)dml]) -> None :
+            Print out string and insert end of line symbol. If dml = True string is printed with dml highlighting ( only for windbg )
+        
+            C++ signature :
+                void dprintln(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,bool])
+    
+    enumTagged(...)
+        enumTagged() -> list :
+            Return the list of secondary callback data IDs (as a strings)
+        
+            C++ signature :
+                class boost::python::list enumTagged()
+    
+    evalExpr(...)
+        evalExpr( (str)expression [, (object)scope [, (typeInfoProvider)typeProvider]]) -> typedVar :
+            Evaluate C++ expression with typed information
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypedVar> evalExpr(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > [,class boost::python::api::object {lvalue} [,class boost::shared_ptr<class kdlib::TypeInfoProvider> {lvalue}]])
+    
+    expr(...)
+        expr( (unicode)expression [, (bool)cplusplus]) -> object :
+            Evaluate windbg expression
+        
+            C++ signature :
+                class boost::python::api::object expr(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,bool])
+    
+    findMemoryRegion(...)
+        findMemoryRegion( (long)arg1) -> tuple :
+            Return address of beginning valid memory region nearest to offset
+        
+            C++ signature :
+                class boost::python::tuple findMemoryRegion(unsigned __int64)
+    
+    findSymbol(...)
+        findSymbol( (long)offset [, (bool)showDisplacement]) -> unicode :
+            Find symbol by the target virtual memory offset
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > findSymbol(unsigned __int64 [,bool])
+    
+    findSymbolAndDisp(...)
+        findSymbolAndDisp( (long)arg1) -> tuple :
+            Return tuple (module_name, symbol_name, displacement) by virtual address
+        
+            C++ signature :
+                class boost::python::tuple findSymbolAndDisp(unsigned __int64)
+    
+    getBp(...)
+        getBp( (int)arg1) -> breakpoint :
+            Return breakpoint object by index
+        
+            C++ signature :
+                class pykd::Breakpoint * __ptr64 getBp(unsigned long)
+    
+    getCPUMode(...)
+        getCPUMode() -> CPUType :
+            Return current processor mode: CPUType
+        
+            C++ signature :
+                enum kdlib::CPUType getCPUMode()
+    
+    getCPUType(...)
+        getCPUType() -> CPUType :
+            Return type of physical processor: CPUType
+        
+            C++ signature :
+                enum kdlib::CPUType getCPUType()
+    
+    getCurrentProcess(...)
+        getCurrentProcess() -> int :
+            Return current offset
+        
+            C++ signature :
+                unsigned __int64 getCurrentProcess()
+    
+    getCurrentProcessId(...)
+        getCurrentProcessId() -> int :
+            Return current process ID
+        
+            C++ signature :
+                unsigned long getCurrentProcessId()
+    
+    getCurrentThread(...)
+        getCurrentThread() -> int :
+            Return current thread offset
+        
+            C++ signature :
+                unsigned __int64 getCurrentThread()
+    
+    getCurrentThreadId(...)
+        getCurrentThreadId() -> int :
+            Return current thread ID
+        
+            C++ signature :
+                unsigned long getCurrentThreadId()
+    
+    getDebugOptions(...)
+        getDebugOptions() -> int :
+            Return debug options
+        
+            C++ signature :
+                unsigned long getDebugOptions()
+    
+    getDumpFormat(...)
+        getDumpFormat() -> int :
+            Return format the dump
+        
+            C++ signature :
+                unsigned long getDumpFormat()
+    
+    getDumpType(...)
+        getDumpType() -> dumpType :
+            Return type of the dump
+        
+            C++ signature :
+                enum kdlib::DumpType getDumpType()
+    
+    getExecutionStatus(...)
+        getExecutionStatus() -> executionStatus :
+            Return current execution status
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus getExecutionStatus()
+    
+    getExtensionSearchPath(...)
+        getExtensionSearchPath() -> unicode :
+            Return the extension DLL search path
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getExtensionSearchPath()
+    
+    getFP(...)
+        getFP() -> int :
+            Return frame pointer
+        
+            C++ signature :
+                unsigned __int64 getFP()
+    
+    getFrame(...)
+        getFrame() -> stackFrame :
+            Return a current stack frame
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::StackFrame> getFrame()
+    
+    getFrameNumber(...)
+        getFrameNumber() -> int :
+            Return current frame number
+        
+            C++ signature :
+                unsigned long getFrameNumber()
+    
+    getHostProcessPath(...)
+        getHostProcessPath() -> unicode :
+            Return image path of the process running python interpreter with a pykd
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getHostProcessPath()
+    
+    getIP(...)
+        getIP() -> int :
+            Return instruction pointer
+        
+            C++ signature :
+                unsigned __int64 getIP()
+    
+    getImplicitProcess(...)
+        getImplicitProcess() -> int :
+            Return implicit process
+        
+            C++ signature :
+                unsigned __int64 getImplicitProcess()
+    
+    getImplicitThread(...)
+        getImplicitThread() -> int :
+            Return implicit thread
+        
+            C++ signature :
+                unsigned __int64 getImplicitThread()
+    
+    getLastEvent(...)
+        getLastEvent() -> debugEvent :
+            Get last debug event information
+        
+            C++ signature :
+                struct pykd::DebugEvent getLastEvent()
+    
+    getLastException(...)
+        getLastException() -> exceptionInfo :
+            Get last exception information
+        
+            C++ signature :
+                struct kdlib::ExceptionInfo getLastException()
+    
+    getLocal(...)
+        getLocal( (unicode)arg1) -> typedVar :
+            Get the fucntion's local variable by name
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypedVar> getLocal(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    getLocalProcesses(...)
+        getLocalProcesses() -> list :
+            Return list of running processes on the host system
+        
+            C++ signature :
+                class boost::python::list getLocalProcesses()
+    
+    getLocals(...)
+        getLocals() -> list :
+            Get list of local variables
+        
+            C++ signature :
+                class boost::python::list getLocals()
+    
+    getModulesList(...)
+        getModulesList() -> list :
+            Return list of modules for the current target
+        
+            C++ signature :
+                class boost::python::list getModulesList()
+    
+    getNumberBreakpoints(...)
+        getNumberBreakpoints() -> int :
+            Return number of breakpoints in the current process
+        
+            C++ signature :
+                unsigned long getNumberBreakpoints()
+    
+    getNumberProcesses(...)
+        getNumberProcesses() -> int :
+            Return number of processes on the target system
+        
+            C++ signature :
+                unsigned long getNumberProcesses()
+    
+    getNumberRegisters(...)
+        getNumberRegisters() -> int :
+            Return a number of CPU registers
+        
+            C++ signature :
+                unsigned long getNumberRegisters()
+    
+    getNumberThreads(...)
+        getNumberThreads() -> int :
+            Return number of threads on the current system
+        
+            C++ signature :
+                unsigned long getNumberThreads()
+    
+    getOffset(...)
+        getOffset( (unicode)arg1) -> int :
+            Return target virtual address for specified symbol
+        
+            C++ signature :
+                unsigned __int64 getOffset(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    getOutputMask(...)
+        getOutputMask() -> int :
+            Get output mask
+        
+            C++ signature :
+                unsigned long getOutputMask()
+    
+    getParam(...)
+        getParam( (unicode)arg1) -> typedVar :
+            Get the function argument by name
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypedVar> getParam(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    getParams(...)
+        getParams() -> list :
+            Get list of function arguments as list of tuple (name, value ) 
+        
+            C++ signature :
+                class boost::python::list getParams()
+    
+    getProcessExeName(...)
+        getProcessExeName([  (int)Id]) -> unicode :
+            Return name of executable file of the process
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getProcessExeName([ unsigned long])
+    
+    getProcessId(...)
+        getProcessId( (int)arg1) -> int :
+            Return process ID by index
+        
+            C++ signature :
+                unsigned long getProcessId(unsigned long)
+    
+    getProcessIdBySystemID(...)
+        getProcessIdBySystemID( (int)arg1) -> int :
+            Return process ID by the system's process ID ( PID )
+        
+            C++ signature :
+                unsigned long getProcessIdBySystemID(unsigned long)
+    
+    getProcessOffset(...)
+        getProcessOffset([  (int)Id]) -> int :
+            Return the location in the target's memory of the process structure ( PEB )
+        
+            C++ signature :
+                unsigned __int64 getProcessOffset([ unsigned long])
+    
+    getProcessSystemID(...)
+        getProcessSystemID([  (int)Id]) -> int :
+            Return system process ID ( PID )
+        
+            C++ signature :
+                unsigned long getProcessSystemID([ unsigned long])
+    
+    getProcessThreads(...)
+        getProcessThreads() -> list :
+            Get all process's threads 
+        
+            C++ signature :
+                class boost::python::list getProcessThreads()
+    
+    getRegisterName(...)
+        getRegisterName( (int)arg1) -> unicode :
+            Return register name by its index
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getRegisterName(unsigned long)
+    
+    getSP(...)
+        getSP() -> int :
+            Return stack pointer
+        
+            C++ signature :
+                unsigned __int64 getSP()
+    
+    getSourceFile(...)
+        getSourceFile([  (long)offset]) -> unicode :
+            Return source file by the specified offset
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getSourceFile([ unsigned __int64])
+    
+    getSourceFileFromSrcSrv(...)
+        getSourceFileFromSrcSrv([  (long)offset]) -> unicode :
+            Load and return source file from source server by the specified offset
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getSourceFileFromSrcSrv([ unsigned __int64])
+    
+    getSourceLine(...)
+        getSourceLine([  (long)offset]) -> tuple :
+            Return source file name, line and displacement by the specified offset
+        
+            C++ signature :
+                class boost::python::tuple getSourceLine([ unsigned __int64])
+    
+    getSrcPath(...)
+        getSrcPath() -> unicode :
+            Return current source server path
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getSrcPath()
+    
+    getStack(...)
+        getStack([  (bool)inlineFrames]) -> list :
+            Return a current stack as a list of stackFrame objects
+        
+            C++ signature :
+                class boost::python::list getStack([ bool])
+    
+    getSymbolPath(...)
+        getSymbolPath() -> unicode :
+            Returns current symbol path
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > getSymbolPath()
+    
+    getSymbolProviderFromSource(...)
+        getSymbolProviderFromSource( (unicode)sourceCode [, (unicode)compileOptions]) -> symbolProvider :
+            Create symbol provider for source code
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::SymbolProvider> getSymbolProviderFromSource(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >])
+    
+    getSystemVersion(...)
+        getSystemVersion() -> systemVersion :
+            Return systemVersion
+        
+            C++ signature :
+                struct kdlib::SystemInfo getSystemVersion()
+    
+    getTargetProcesses(...)
+        getTargetProcesses() -> list :
+            Get all target processes 
+        
+            C++ signature :
+                class boost::python::list getTargetProcesses()
+    
+    getThreadId(...)
+        getThreadId( (int)arg1) -> int :
+            Return thread id by index
+        
+            C++ signature :
+                unsigned long getThreadId(unsigned long)
+    
+    getThreadIdByOffset(...)
+        getThreadIdByOffset( (long)arg1) -> int :
+            Return thread ID by the location in the target's memory of the thread structure
+        
+            C++ signature :
+                unsigned long getThreadIdByOffset(unsigned __int64)
+    
+    getThreadIdBySystemID(...)
+        getThreadIdBySystemID([  (int)Tid]) -> int :
+            Return thread ID by the system's thread ID ( TID )
+        
+            C++ signature :
+                unsigned long getThreadIdBySystemID([ unsigned long])
+    
+    getThreadOffset(...)
+        getThreadOffset([  (int)Id]) -> int :
+            Return the location in the target's memory of the thread structure ( TEB )
+        
+            C++ signature :
+                unsigned __int64 getThreadOffset([ unsigned long])
+    
+    getThreadSystemID(...)
+        getThreadSystemID([  (int)Id]) -> int :
+            Return system thread ID ( TID )
+        
+            C++ signature :
+                unsigned long getThreadSystemID([ unsigned long])
+    
+    getTypeFromSource(...)
+        getTypeFromSource( (unicode)sourceCode, (unicode)typeName [, (unicode)compileOptions]) -> typeInfo :
+            Create typeInfo class from C/C++ source code
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypeInfo> getTypeFromSource(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >])
+    
+    getTypeInfoProviderFromPdb(...)
+        getTypeInfoProviderFromPdb( (unicode)filePath [, (long)baseOffset]) -> typeInfoProvider :
+            Create typeInfo provider from pdb file
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypeInfoProvider> getTypeInfoProviderFromPdb(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,unsigned __int64])
+    
+    getTypeInfoProviderFromSource(...)
+        getTypeInfoProviderFromSource( (unicode)sourceCode [, (unicode)compileOptions]) -> typeInfoProvider :
+            Create typeInfo provider from C/C++ source code
+        
+            C++ signature :
+                class boost::shared_ptr<class kdlib::TypeInfoProvider> getTypeInfoProviderFromSource(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >])
+    
+    getVaAttributes(...)
+        getVaAttributes( (long)arg1) -> tuple :
+            Return memory attributes
+        
+            C++ signature :
+                class boost::python::tuple getVaAttributes(unsigned __int64)
+    
+    getVaProtect(...)
+        getVaProtect( (long)arg1) -> memoryProtect :
+            Return memory protect
+        
+            C++ signature :
+                enum kdlib::MemoryProtect getVaProtect(unsigned __int64)
+    
+    getVaState(...)
+        getVaState( (long)arg1) -> memoryState :
+            Return memory state
+        
+            C++ signature :
+                enum kdlib::MemoryState getVaState(unsigned __int64)
+    
+    getVaType(...)
+        getVaType( (long)arg1) -> memoryType :
+            Return memory type
+        
+            C++ signature :
+                enum kdlib::MemoryType getVaType(unsigned __int64)
+    
+    go(...)
+        go() -> executionStatus :
+            Go debugging
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus go()
+    
+    initialize(...)
+        initialize() -> None :
+            Initialize local debug engine, only for console mode
+        
+            C++ signature :
+                void initialize()
+    
+    is64bitSystem(...)
+        is64bitSystem() -> bool :
+            Check if target system has 64 address space
+        
+            C++ signature :
+                bool is64bitSystem()
+    
+    isDumpAnalyzing(...)
+        isDumpAnalyzing() -> bool :
+            Check if it is a dump analyzing ( not living debuggee )
+        
+            C++ signature :
+                bool isDumpAnalyzing()
+    
+    isKernelDebugging(...)
+        isKernelDebugging() -> bool :
+            Check if kernel dubugging is running
+        
+            C++ signature :
+                bool isKernelDebugging()
+    
+    isLocalKernelDebuggerEnabled(...)
+        isLocalKernelDebuggerEnabled() -> bool :
+            Check whether kernel debugging is enabled for the local kernel
+        
+            C++ signature :
+                bool isLocalKernelDebuggerEnabled()
+    
+    isVaRegionValid(...)
+        isVaRegionValid( (long)arg1, (int)arg2) -> bool :
+            Check if the virtual addresses region is valid
+        
+            C++ signature :
+                bool isVaRegionValid(unsigned __int64,unsigned long)
+    
+    isValid(...)
+        isValid( (long)arg1) -> bool :
+            Check if the virtual address is valid
+        
+            C++ signature :
+                bool isValid(unsigned __int64)
+    
+    isWindbgExt(...)
+        isWindbgExt() -> bool :
+            Check if script works in windbg context
+        
+            C++ signature :
+                bool isWindbgExt()
+    
+    killAllProcesses(...)
+        killAllProcesses() -> None :
+            Detach from all process then terminate them
+        
+            C++ signature :
+                void killAllProcesses()
+    
+    killProcess(...)
+        killProcess([  (int)id]) -> None :
+            Stop debugging and terminate current process
+        
+            C++ signature :
+                void killProcess([ unsigned long])
+    
+    loadAnsiString(...)
+        loadAnsiString( (long)arg1) -> str :
+            Return string representation of windows ANSI_STRING type
+        
+            C++ signature :
+                class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > loadAnsiString(unsigned __int64)
+    
+    loadBytes(...)
+        loadBytes( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of unsigned bytes
+        
+            C++ signature :
+                class boost::python::list loadBytes(unsigned __int64,unsigned long [,bool])
+    
+    loadCStr(...)
+        loadCStr( (long)arg1) -> str :
+            Load string from the target buffer containing 0-terminated ansi-string
+        
+            C++ signature :
+                class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > loadCStr(unsigned __int64)
+    
+    loadChars(...)
+        loadChars( (long)address, (int)count [, (bool)phyAddr]) -> str :
+            Load string from target memory
+        
+            C++ signature :
+                class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > loadChars(unsigned __int64,unsigned long [,bool])
+    
+    loadDWords(...)
+        loadDWords( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of unsigned long ( double word )
+        
+            C++ signature :
+                class boost::python::list loadDWords(unsigned __int64,unsigned long [,bool])
+    
+    loadDoubles(...)
+        loadDoubles( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of doubles
+        
+            C++ signature :
+                class boost::python::list loadDoubles(unsigned __int64,unsigned long [,bool])
+    
+    loadDump(...)
+        loadDump( (unicode)arg1) -> int :
+            Load crash dump
+        
+            C++ signature :
+                unsigned long loadDump(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    loadExt(...)
+        loadExt( (unicode)arg1) -> int :
+            Load a WinDBG extension. Return handle of the loaded extension
+        
+            C++ signature :
+                unsigned __int64 loadExt(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    loadFloats(...)
+        loadFloats( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of floats
+        
+            C++ signature :
+                class boost::python::list loadFloats(unsigned __int64,unsigned long [,bool])
+    
+    loadPtrList(...)
+        loadPtrList( (long)arg1) -> list :
+            Return list of pointers, each points to next
+        
+            C++ signature :
+                class boost::python::list loadPtrList(unsigned __int64)
+    
+    loadPtrs(...)
+        loadPtrs( (long)arg1, (int)arg2) -> list :
+            Read the block of the target's memory and return it as a list of pointers
+        
+            C++ signature :
+                class boost::python::list loadPtrs(unsigned __int64,unsigned long)
+    
+    loadQWords(...)
+        loadQWords( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of unsigned long long ( quad word )
+        
+            C++ signature :
+                class boost::python::list loadQWords(unsigned __int64,unsigned long [,bool])
+    
+    loadSignBytes(...)
+        loadSignBytes( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of signed bytes
+        
+            C++ signature :
+                class boost::python::list loadSignBytes(unsigned __int64,unsigned long [,bool])
+    
+    loadSignDWords(...)
+        loadSignDWords( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of signed longs
+        
+            C++ signature :
+                class boost::python::list loadSignDWords(unsigned __int64,unsigned long [,bool])
+    
+    loadSignQWords(...)
+        loadSignQWords( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of signed long longs
+        
+            C++ signature :
+                class boost::python::list loadSignQWords(unsigned __int64,unsigned long [,bool])
+    
+    loadSignWords(...)
+        loadSignWords( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of signed words
+        
+            C++ signature :
+                class boost::python::list loadSignWords(unsigned __int64,unsigned long [,bool])
+    
+    loadTaggedBuffer(...)
+        loadTaggedBuffer( (unicode)arg1) -> list :
+            Read the buffer of secondary callback data by ID
+        
+            C++ signature :
+                class boost::python::list loadTaggedBuffer(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    loadUnicodeString(...)
+        loadUnicodeString( (long)arg1) -> unicode :
+            Return string representation of windows UNICODE_STRING type
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > loadUnicodeString(unsigned __int64)
+    
+    loadWChars(...)
+        loadWChars( (long)address, (int)count [, (bool)phyAddr]) -> unicode :
+            Load string from target memory
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > loadWChars(unsigned __int64,unsigned long [,bool])
+    
+    loadWStr(...)
+        loadWStr( (long)arg1) -> unicode :
+            Load string from the target buffer containing 0-terminated unicode-string
+        
+            C++ signature :
+                class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > loadWStr(unsigned __int64)
+    
+    loadWords(...)
+        loadWords( (long)offset, (int)count [, (bool)phyAddr]) -> list :
+            Read the block of the target's memory and return it as list of unsigned shorts
+        
+            C++ signature :
+                class boost::python::list loadWords(unsigned __int64,unsigned long [,bool])
+    
+    pageSize(...)
+        pageSize() -> int :
+            Get the page size for the currently executing processor context
+        
+            C++ signature :
+                unsigned __int64 pageSize()
+    
+    popStack(...)
+        popStack() -> object :
+            Pop a value from a stack
+        
+            C++ signature :
+                class kdlib::NumVariant popStack()
+    
+    ptrByte(...)
+        ptrByte( (long)arg1) -> int :
+            Read an unsigned 1-byte integer from the target memory
+        
+            C++ signature :
+                unsigned char ptrByte(unsigned __int64)
+    
+    ptrDWord(...)
+        ptrDWord( (long)arg1) -> int :
+            Read an unsigned 4-byte integer from the target memory
+        
+            C++ signature :
+                unsigned long ptrDWord(unsigned __int64)
+    
+    ptrDouble(...)
+        ptrDouble( (long)arg1) -> float :
+            Read a float with single precision from the target memory
+        
+            C++ signature :
+                double ptrDouble(unsigned __int64)
+    
+    ptrFloat(...)
+        ptrFloat( (long)arg1) -> float :
+            Read a float with single precision from the target memory
+        
+            C++ signature :
+                float ptrFloat(unsigned __int64)
+    
+    ptrMWord(...)
+        ptrMWord( (long)arg1) -> int :
+            Read an unsigned mashine's word wide integer from the target memory
+        
+            C++ signature :
+                unsigned __int64 ptrMWord(unsigned __int64)
+    
+    ptrPtr(...)
+        ptrPtr( (long)arg1) -> int :
+            Read an pointer value from the target memory
+        
+            C++ signature :
+                unsigned __int64 ptrPtr(unsigned __int64)
+    
+    ptrQWord(...)
+        ptrQWord( (long)arg1) -> int :
+            Read an unsigned 8-byte integer from the target memory
+        
+            C++ signature :
+                unsigned __int64 ptrQWord(unsigned __int64)
+    
+    ptrSignByte(...)
+        ptrSignByte( (long)arg1) -> int :
+            Read an signed 1-byte integer from the target memory
+        
+            C++ signature :
+                int ptrSignByte(unsigned __int64)
+    
+    ptrSignDWord(...)
+        ptrSignDWord( (long)arg1) -> int :
+            Read an signed 4-byte integer from the target memory
+        
+            C++ signature :
+                long ptrSignDWord(unsigned __int64)
+    
+    ptrSignMWord(...)
+        ptrSignMWord( (long)arg1) -> int :
+            Read an signed mashine's word wide integer from the target memory
+        
+            C++ signature :
+                __int64 ptrSignMWord(unsigned __int64)
+    
+    ptrSignQWord(...)
+        ptrSignQWord( (long)arg1) -> int :
+            Read an signed 8-byte integer from the target memory
+        
+            C++ signature :
+                __int64 ptrSignQWord(unsigned __int64)
+    
+    ptrSignWord(...)
+        ptrSignWord( (long)arg1) -> int :
+            Read an signed 2-byte integer from the target memory
+        
+            C++ signature :
+                short ptrSignWord(unsigned __int64)
+    
+    ptrSize(...)
+        ptrSize() -> int :
+            Return effective pointer size
+        
+            C++ signature :
+                unsigned __int64 ptrSize()
+    
+    ptrWord(...)
+        ptrWord( (long)arg1) -> int :
+            Read an unsigned 2-byte integer from the target memory
+        
+            C++ signature :
+                unsigned short ptrWord(unsigned __int64)
+    
+    pushStack(...)
+        pushStack( (object)arg1) -> None :
+            Push a value into a stack
+        
+            C++ signature :
+                void pushStack(class kdlib::NumVariant)
+    
+    rdmsr(...)
+        rdmsr( (int)arg1) -> int :
+            Return MSR value
+        
+            C++ signature :
+                unsigned __int64 rdmsr(unsigned long)
+    
+    reg(...)
+        reg( (unicode)arg1) -> object :
+            Return a CPU register value by the register's name
+        
+            C++ signature :
+                class boost::python::api::object reg(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+        
+        reg( (int)arg1) -> object :
+            Return a CPU register value by the register's number
+        
+            C++ signature :
+                class boost::python::api::object reg(unsigned long)
+    
+    remoteConnect(...)
+        remoteConnect( (unicode)arg1) -> None :
+            Initialize debug engine for remoting, only for console mode
+        
+            C++ signature :
+                void remoteConnect(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    removeAllBp(...)
+        removeAllBp() -> None :
+            Remove all breakpoints
+        
+            C++ signature :
+                void removeAllBp()
+    
+    removeBp(...)
+        removeBp( (int)arg1) -> None :
+            Remove breakpoint by index
+        
+            C++ signature :
+                void removeBp(unsigned long)
+    
+    removeExt(...)
+        removeExt( (long)arg1) -> None :
+            Unload a WinDBG extension. Parameter: handle returned by loadExt
+        
+            C++ signature :
+                void removeExt(unsigned __int64)
+        
+        removeExt( (unicode)arg1) -> None :
+            Unload a WinDBG extension. Parameter: extension path
+        
+            C++ signature :
+                void removeExt(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    removeSyntheticModule(...)
+        removeSyntheticModule( (long)arg1) -> None :
+            The removeSyntheticModule function removes a synthetic module from the module list the debugger maintains for the current process
+        
+            C++ signature :
+                void removeSyntheticModule(unsigned __int64)
+    
+    removeSyntheticSymbol(...)
+        removeSyntheticSymbol( (syntheticSymbol)arg1) -> None :
+            The removeSyntheticSymbol function removes a synthetic symbol from a module in the current process
+        
+            C++ signature :
+                void removeSyntheticSymbol(struct kdlib::SyntheticSymbol)
+    
+    resetFrame(...)
+        resetFrame() -> None :
+            Resets the current local scope to the default scope of the current thread
+        
+            C++ signature :
+                void resetFrame()
+    
+    searchMemory(...)
+        searchMemory( (long)arg1, (int)arg2, (list)arg3) -> int :
+            Search in virtual memory
+        
+            C++ signature :
+                unsigned __int64 searchMemory(unsigned __int64,unsigned long,class boost::python::list)
+        
+        searchMemory( (long)arg1, (int)arg2, (str)arg3) -> int :
+            Search in virtual memory
+        
+            C++ signature :
+                unsigned __int64 searchMemory(unsigned __int64,unsigned long,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)
+    
+    setBp(...)
+        setBp( (long)offset [, (object)callback]) -> breakpoint :
+            Set software breakpoint on execution
+        
+            C++ signature :
+                class pykd::Breakpoint * __ptr64 setBp(unsigned __int64 [,class boost::python::api::object {lvalue}])
+        
+        setBp( (long)offset, (long)size, (int)accsessType [, (object)callback]) -> breakpoint :
+            Set hardware breakpoint
+        
+            C++ signature :
+                class pykd::Breakpoint * __ptr64 setBp(unsigned __int64,unsigned __int64,unsigned long [,class boost::python::api::object {lvalue}])
+    
+    setByte(...)
+        setByte( (long)arg1, (int)arg2) -> None :
+            Write an unsigned 1-byte integer to the target memory
+        
+            C++ signature :
+                void setByte(unsigned __int64,unsigned char)
+    
+    setCPUMode(...)
+        setCPUMode( (CPUType)arg1) -> None :
+            Set current processor mode (CPUType)
+        
+            C++ signature :
+                void setCPUMode(enum kdlib::CPUType)
+    
+    setCurrentProcess(...)
+        setCurrentProcess( (long)arg1) -> None :
+            Set current process
+        
+            C++ signature :
+                void setCurrentProcess(unsigned __int64)
+    
+    setCurrentProcessId(...)
+        setCurrentProcessId( (int)arg1) -> None :
+            Set current process by debug ID
+        
+            C++ signature :
+                void setCurrentProcessId(unsigned long)
+    
+    setCurrentThread(...)
+        setCurrentThread( (long)arg1) -> None :
+            Set current thread
+        
+            C++ signature :
+                void setCurrentThread(unsigned __int64)
+    
+    setCurrentThreadId(...)
+        setCurrentThreadId( (int)arg1) -> None :
+            Set current thread by debug ID
+        
+            C++ signature :
+                void setCurrentThreadId(unsigned long)
+    
+    setDWord(...)
+        setDWord( (long)arg1, (int)arg2) -> None :
+            Write an unsigned 4-byte integer to the target memory
+        
+            C++ signature :
+                void setDWord(unsigned __int64,unsigned long)
+    
+    setDouble(...)
+        setDouble( (long)arg1, (float)arg2) -> None :
+            Write a float with single precision to the target memory
+        
+            C++ signature :
+                void setDouble(unsigned __int64,double)
+    
+    setFP(...)
+        setFP( (long)arg1) -> None :
+            Change frame pointer
+        
+            C++ signature :
+                void setFP(unsigned __int64)
+    
+    setFloat(...)
+        setFloat( (long)arg1, (float)arg2) -> None :
+            Write a float with single precision to the target memory
+        
+            C++ signature :
+                void setFloat(unsigned __int64,float)
+    
+    setFrame(...)
+        setFrame( (stackFrame)arg1) -> None :
+            Change current local scope
+        
+            C++ signature :
+                void setFrame(class boost::shared_ptr<class kdlib::StackFrame> {lvalue})
+        
+        setFrame( (int)arg1) -> None :
+            Change current local scope
+        
+            C++ signature :
+                void setFrame(unsigned long)
+    
+    setIP(...)
+        setIP( (long)arg1) -> None :
+            Change instruction pointer
+        
+            C++ signature :
+                void setIP(unsigned __int64)
+    
+    setImplicitProcess(...)
+        setImplicitProcess( (long)arg1) -> None :
+            Set implicit process
+        
+            C++ signature :
+                void setImplicitProcess(unsigned __int64)
+    
+    setImplicitThread(...)
+        setImplicitThread( (long)arg1) -> None :
+            Set implicit thread
+        
+            C++ signature :
+                void setImplicitThread(unsigned __int64)
+    
+    setOutputMask(...)
+        setOutputMask( (int)arg1) -> None :
+            Set output mask
+        
+            C++ signature :
+                void setOutputMask(unsigned long)
+    
+    setPtr(...)
+        setPtr( (long)arg1, (long)arg2) -> None :
+            Write an pointer value to the target memory
+        
+            C++ signature :
+                void setPtr(unsigned __int64,unsigned __int64)
+    
+    setQWord(...)
+        setQWord( (long)arg1, (long)arg2) -> None :
+            Write an unsigned 8-byte integer to the target memory
+        
+            C++ signature :
+                void setQWord(unsigned __int64,unsigned __int64)
+    
+    setReg(...)
+        setReg( (unicode)arg1, (object)arg2) -> None :
+            Set a CPU register value by its name
+        
+            C++ signature :
+                void setReg(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,class boost::python::api::object)
+        
+        setReg( (int)arg1, (object)arg2) -> None :
+            Set a CPU register value by its index
+        
+            C++ signature :
+                void setReg(unsigned long,class boost::python::api::object)
+    
+    setSP(...)
+        setSP( (long)arg1) -> None :
+            Change stack pointer
+        
+            C++ signature :
+                void setSP(unsigned __int64)
+    
+    setSignByte(...)
+        setSignByte( (long)arg1, (int)arg2) -> None :
+            Write an signed 1-byte integer to the target memory
+        
+            C++ signature :
+                void setSignByte(unsigned __int64,int)
+    
+    setSignDWord(...)
+        setSignDWord( (long)arg1, (int)arg2) -> None :
+            Write an signed 4-byte integer to the target memory
+        
+            C++ signature :
+                void setSignDWord(unsigned __int64,long)
+    
+    setSignQWord(...)
+        setSignQWord( (long)arg1, (long)arg2) -> None :
+            Write an signed 8-byte integer to the target memory
+        
+            C++ signature :
+                void setSignQWord(unsigned __int64,__int64)
+    
+    setSignWord(...)
+        setSignWord( (long)arg1, (int)arg2) -> None :
+            Write an signed 2-byte integer to the target memory
+        
+            C++ signature :
+                void setSignWord(unsigned __int64,short)
+    
+    setSrcPath(...)
+        setSrcPath( (unicode)arg1) -> None :
+            Set source path
+        
+            C++ signature :
+                void setSrcPath(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    setStatusMessage(...)
+        setStatusMessage( (unicode)arg1) -> None :
+            Set message at a windbg status bar
+        
+            C++ signature :
+                void setStatusMessage(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    setSymSrvDir(...)
+        setSymSrvDir( (unicode)arg1) -> None :
+            Set directory of SYMSRV.dll library.
+            Usually this is a directory of WinDbg
+        
+            C++ signature :
+                void setSymSrvDir(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    setSymbolPath(...)
+        setSymbolPath( (unicode)arg1) -> None :
+            Set current symbol path
+        
+            C++ signature :
+                void setSymbolPath(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    setWord(...)
+        setWord( (long)arg1, (int)arg2) -> None :
+            Write an unsigned 2-byte integer to the target memory
+        
+            C++ signature :
+                void setWord(unsigned __int64,unsigned short)
+    
+    sizeof(...)
+        sizeof( (unicode)arg1) -> int :
+            Return a size of the type or variable
+        
+            C++ signature :
+                unsigned __int64 sizeof(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    sourceStep(...)
+        sourceStep() -> executionStatus :
+            The target is executing a single source line
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus sourceStep()
+    
+    sourceStepOver(...)
+        sourceStepOver() -> executionStatus :
+            The target is executing a single source line
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus sourceStepOver()
+    
+    stackAlloc(...)
+        stackAlloc( (int)arg1) -> int :
+            Allocate bytes of space in the stack in the target process
+        
+            C++ signature :
+                unsigned __int64 stackAlloc(unsigned short)
+    
+    stackFree(...)
+        stackFree( (int)arg1) -> int :
+            Free space in the stack previously allocated by stackAlloc
+        
+            C++ signature :
+                unsigned __int64 stackFree(unsigned short)
+    
+    startProcess(...)
+        startProcess( (unicode)commandline [, (int)debugOptions]) -> int :
+            Start process for debugging
+        
+            C++ signature :
+                unsigned long startProcess(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > [,unsigned long])
+    
+    step(...)
+        step() -> executionStatus :
+            The target is executing a single instruction or--if that instruction is a subroutine call--subroutine
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus step()
+    
+    stepout(...)
+        stepout() -> executionStatus :
+            The target is executing while not returned from the current subroutine
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus stepout()
+    
+    switchCPUMode(...)
+        switchCPUMode() -> None :
+            Switch processor mode ( X86 <-> X64 )
+        
+            C++ signature :
+                void switchCPUMode()
+    
+    systemUptime(...)
+        systemUptime() -> int :
+            Return the number of seconds the computer has been running
+        
+            C++ signature :
+                unsigned long systemUptime()
+    
+    trace(...)
+        trace() -> executionStatus :
+            The target is executing a single instruction
+        
+            C++ signature :
+                enum kdlib::ExecutionStatus trace()
+    
+    typedVarArray(...)
+        typedVarArray( (long)arg1, (unicode)arg2, (long)arg3) -> list :
+            Return a list of the typedVar class instances. Each item represents an item of the counted array in the target memory
+        
+            C++ signature :
+                class boost::python::list typedVarArray(unsigned __int64,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,unsigned __int64)
+        
+        typedVarArray( (long)arg1, (typeInfo)arg2, (long)arg3) -> list :
+            Return a list of the typedVar class instances. Each item represents an item of the counted array in the target memory
+        
+            C++ signature :
+                class boost::python::list typedVarArray(unsigned __int64,class boost::shared_ptr<class kdlib::TypeInfo> {lvalue},unsigned __int64)
+    
+    typedVarList(...)
+        typedVarList( (long)arg1, (unicode)arg2, (unicode)arg3) -> list :
+            Return a list of the typedVar class instances. Each item represents an item of the linked list in the target memory
+        
+            C++ signature :
+                class boost::python::list typedVarList(unsigned __int64,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+        
+        typedVarList( (long)arg1, (typeInfo)arg2, (unicode)arg3) -> list :
+            Return a list of the typedVar class instances. Each item represents an item of the linked list in the target memory
+        
+            C++ signature :
+                class boost::python::list typedVarList(unsigned __int64,class boost::shared_ptr<class kdlib::TypeInfo> {lvalue},class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    writeBytes(...)
+        writeBytes( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of unsigned bytes to the target's memory
+        
+            C++ signature :
+                void writeBytes(unsigned __int64,class boost::python::list [,bool])
+    
+    writeCStr(...)
+        writeCStr( (long)arg1, (str)arg2) -> None :
+            Write string as a 0 terminated ansi string to the buffer
+        
+            C++ signature :
+                void writeCStr(unsigned __int64,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)
+    
+    writeDWords(...)
+        writeDWords( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of unsigned long ( double word ) to the target's memory
+        
+            C++ signature :
+                void writeDWords(unsigned __int64,class boost::python::list [,bool])
+    
+    writeDoubles(...)
+        writeDoubles( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of doubles to the target's memory
+        
+            C++ signature :
+                void writeDoubles(unsigned __int64,class boost::python::list [,bool])
+    
+    writeDump(...)
+        writeDump( (unicode)arg1, (bool)arg2) -> None :
+            Create memory dump file
+        
+            C++ signature :
+                void writeDump(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,bool)
+    
+    writeFloats(...)
+        writeFloats( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of floats to the target's memory
+        
+            C++ signature :
+                void writeFloats(unsigned __int64,class boost::python::list [,bool])
+    
+    writeQWords(...)
+        writeQWords( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of unsigned long long ( quad word ) to the target's memory
+        
+            C++ signature :
+                void writeQWords(unsigned __int64,class boost::python::list [,bool])
+    
+    writeSignBytes(...)
+        writeSignBytes( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of signed bytes to the target's memory
+        
+            C++ signature :
+                void writeSignBytes(unsigned __int64,class boost::python::list [,bool])
+    
+    writeSignDWords(...)
+        writeSignDWords( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of signed longs to the target's memory
+        
+            C++ signature :
+                void writeSignDWords(unsigned __int64,class boost::python::list [,bool])
+    
+    writeSignQWords(...)
+        writeSignQWords( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of signed long longs to the target's memory
+        
+            C++ signature :
+                void writeSignQWords(unsigned __int64,class boost::python::list [,bool])
+    
+    writeSignWords(...)
+        writeSignWords( (long)offset, (list)count [, (bool)phyAddr]) -> None :
+            Writing a list of signed words to the target's memory
+        
+            C++ signature :
+                void writeSignWords(unsigned __int64,class boost::python::list [,bool])
+    
+    writeWStr(...)
+        writeWStr( (long)arg1, (unicode)arg2) -> None :
+            Write string as a 0 terminated unicode string to the buffer
+        
+            C++ signature :
+                void writeWStr(unsigned __int64,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)
+    
+    writeWords(...)
+        writeWords( (long)offset, (list)values [, (bool)phyAddr]) -> None :
+            Writing a list of unsigned shorts to the target's memory
+        
+            C++ signature :
+                void writeWords(unsigned __int64,class boost::python::list [,bool])
+    
+    wrmsr(...)
+        wrmsr( (int)arg1, (long)arg2) -> None :
+            Set MSR value
+        
+            C++ signature :
+                void wrmsr(unsigned long,unsigned __int64)
+
+DATA
+    __version__ = '0.3.4.15'
+    pykd.__deinit__ = <capsule object "pykd.__deinit__">
+    version = '0.3.4.15'
+
+VERSION
+    0.3.4.15
+
+
