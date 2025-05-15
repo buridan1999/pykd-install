@@ -1,0 +1,6 @@
+# Add to path dir with .dll extension
+
+#in windbg:
+
+.load pykd
+!py -2 scripts/pykd-test.py
